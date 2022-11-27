@@ -17,9 +17,8 @@ import com.example.entidades.Contactos;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class VerActivity extends AppCompatActivity {
-
-    EditText txtNombre, txtTelefono;
     Button btnGuarda;
+    EditText txtNombre, txtTelefono;
     FloatingActionButton fabEditar, fabLlamar, fabBorrrar;
     Contactos contacto;
     int id = 0;
@@ -31,7 +30,7 @@ public class VerActivity extends AppCompatActivity {
 
         txtNombre = findViewById(R.id.txtNombre);
         txtTelefono = findViewById(R.id.txtTelefono);
-        // btnGuarda = findViewById(R.id.btnGuarda);
+        btnGuarda = findViewById(R.id.btnGuarda);
         fabEditar = findViewById(R.id.fabEditar);
         fabLlamar = findViewById(R.id.fabLlamar);
         fabBorrrar = findViewById(R.id.fabBorrrar);
@@ -92,7 +91,7 @@ public class VerActivity extends AppCompatActivity {
 
     }
     private void lista() {
-        Intent intent = new Intent(this, NuevoActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

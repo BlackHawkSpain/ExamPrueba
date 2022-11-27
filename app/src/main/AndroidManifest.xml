@@ -7,17 +7,24 @@
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Mi Agenda de Contactos"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamenPrueba"
         tools:targetApi="31">
         <activity
+            android:name="com.example.examenprueba.NuevoActivity"
+            android:exported="false"
+            android:parentActivityName="com.example.examenprueba.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.examenprueba.MainActivity" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
@@ -25,6 +32,30 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity
+            android:name="com.example.examenprueba.VerActivity"
+            android:parentActivityName="com.example.examenprueba.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.examenprueba.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.examenprueba.EditarActivity"
+            android:parentActivityName="com.example.examenprueba.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.examenprueba.MainActivity" />
+        </activity>
+
+        <service
+            android:name="com.example.examenprueba.MainActivity"
+            android:exported="true"
+            android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE">
+            <intent-filter>
+                <action android:name="android.telecom.ConnectionService" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

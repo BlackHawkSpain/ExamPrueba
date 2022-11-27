@@ -28,7 +28,7 @@ public class EditarActivity extends AppCompatActivity {
 
         txtNombre = findViewById(R.id.txtNombre);
         txtTelefono = findViewById(R.id.txtTelefono);
-        //btnGuarda = findViewById(R.id.btnGuarda);
+        btnGuarda = findViewById(R.id.btnGuarda);
         fabLlamar = findViewById(R.id.fabLlamar);
         fabBorrar = findViewById(R.id.fabBorrrar);
         fabEditar = findViewById(R.id.fabEditar);

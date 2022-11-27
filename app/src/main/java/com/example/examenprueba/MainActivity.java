@@ -1,16 +1,4 @@
-//package com.example.examenprueba;
-//
-//import androidx.appcompat.app.AppCompatActivity;
-//import androidx.recyclerview.widget.LinearLayoutManager;
-//import androidx.recyclerview.widget.RecyclerView;
-//import com.adaptadores.ListaContactosAdapter;
-//import android.annotation.SuppressLint;
-//import android.media.MediaPlayer;
-//import android.os.Bundle;
-//import android.view.View;
-//import android.widget.Button;
-//
-//import java.util.ArrayList;
+package com.example.examenprueba;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,10 +18,7 @@ import android.widget.SearchView;
 import com.example.adaptadores.ListaContactosAdapter;
 import com.example.db.DbContactos;
 import com.example.entidades.Contactos;
-import com.example.adaptadores.ListaContactosAdapter;
-import com.example.examenprueba.NuevoActivity;
 import com.example.examenprueba.R;
-import com.example.entidades.Contactos;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
@@ -44,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     RecyclerView listaContactos;
     ArrayList<Contactos> listaArrayContactos;
     ListaContactosAdapter adapter;
-    Button fabNuevo;
+    FloatingActionButton fabNuevo;
     MediaPlayer mp;
     int id=0;
 
@@ -75,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         fabNuevo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mp.start();
+
                 Intent intent = new Intent(MainActivity.this, NuevoActivity.class);
                 intent.putExtra("ID", id);
                 startActivity(intent);
