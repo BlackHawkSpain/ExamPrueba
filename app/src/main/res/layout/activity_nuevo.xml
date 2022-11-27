@@ -17,12 +17,11 @@
         tools:layout_editor_absoluteY="162dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/txtNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Introduzca su nombre"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="134dp" />
@@ -32,12 +31,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Teléfono"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombre"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="134dp" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/txtTelefono"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -53,6 +52,16 @@
         tools:layout_editor_absoluteX="6dp"
         tools:layout_editor_absoluteY="162dp"
         tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnGuarda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="GUARDAR CONTACTO"
+        app:layout_constraintTop_toBottomOf="@+id/txtTelefono"
+        tools:layout_editor_absoluteX="109dp"
         tools:ignore="MissingConstraints" />
 
 
